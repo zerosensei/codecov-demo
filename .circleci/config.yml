@@ -15,7 +15,12 @@ jobs:
       - run:
           name: Run tests and collect coverage
           command: pytest --cov api/
-      - codecov/upload
+      - codecov/upload:
+          flags: backend
+
+  test-frontend:
+    - codecov/upload:
+        flags: frontend
 
 workflows:
   version: 2.1
