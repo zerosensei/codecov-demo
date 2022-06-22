@@ -18,10 +18,6 @@ jobs:
       - codecov/upload:
           flags: backend
 
-  test-frontend:
-    - codecov/upload:
-        flags: frontend
-
 workflows:
   version: 2.1
   build-test:
